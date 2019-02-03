@@ -1,5 +1,5 @@
 document.getElementById('getText').addEventListener('click',getText);
-
+document.getElementById('getUsers').addEventListener('click',getUsers);
 function getText(){
     // fetch('sample.txt')
     // .then(function(res){
@@ -15,4 +15,13 @@ function getText(){
         document.getElementById('output').innerHTML = data;
     })
     .catch((err) => console.log(err))
+}
+
+function getUsers(){
+    fetch('user.json')
+    .get((res) => res.json())
+    .then((data) =>{
+        let output = '<h2>Users</2>';
+        console.log(data);
+    })
 }
