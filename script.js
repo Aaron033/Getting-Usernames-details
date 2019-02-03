@@ -11,5 +11,8 @@ function getText(){
     //Make it more concience
     fetch('sample.txt')
     .then((res) => res.text())
-    .then((data) => console.log(data))
+    .then((data) => {
+        document.getElementById('output').innerHTML = data;
+    })
+    .catch((err) => console.log(err))
 }
