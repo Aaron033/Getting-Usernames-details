@@ -18,10 +18,10 @@ function getText(){
 }
 
 function getUsers(){
-    fetch('user.json')
+    fetch('users.json')
    .then((res) => res.json())
    .then((data) => {
        let output = '<h2> Users </h2';
-       console.loG(data);
+       console.log(data);
    })
 }
